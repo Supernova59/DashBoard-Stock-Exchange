@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b0f1a] text-slate-200 min-h-screen font-sans">
+    <div class="max-w-[1400px] mx-auto px-6 py-8">
+        
+        <header class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 border-b border-slate-800 pb-8">
+            <div>
+                <h1 class="text-3xl font-black text-white tracking-tighter uppercase italic">Track<span class="text-emerald-500">Bourse</span></h1>
+                <p class="text-slate-500 text-sm">Sélectionnez 3 actifs à surveiller en priorité</p>
+            </div>
+            
+            <div class="bg-slate-900/80 border border-emerald-500/20 px-4 py-2 rounded-lg">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.6)]"></div>
+                    <span class="text-xs font-mono text-white" id="api-status">Système prêt</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 shadow-2xl backdrop-blur-sm">
+                <select id="select-1" class="w-full bg-slate-800 border-none text-white text-sm rounded-lg mb-4 focus:ring-emerald-500"></select>
+                <div id="data-1" class="flex justify-between items-end mb-4">
+                    <div class="text-3xl font-black text-white" id="price-1">--.--</div>
+                    <div id="change-1" class="font-mono text-sm">--%</div>
+                </div>
+                <div class="h-64"><canvas id="chart-1"></canvas></div>
+                <div id="insight-1" class="mt-4 p-3 bg-emerald-500/5 rounded-lg border border-emerald-500/10 text-[11px] text-emerald-400 italic"></div>
+            </div>
+
+            <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 shadow-2xl backdrop-blur-sm">
+                <select id="select-2" class="w-full bg-slate-800 border-none text-white text-sm rounded-lg mb-4 focus:ring-emerald-500"></select>
+                <div id="data-2" class="flex justify-between items-end mb-4">
+                    <div class="text-3xl font-black text-white" id="price-2">--.--</div>
+                    <div id="change-2" class="font-mono text-sm">--%</div>
+                </div>
+                <div class="h-64"><canvas id="chart-2"></canvas></div>
+                <div id="insight-2" class="mt-4 p-3 bg-emerald-500/5 rounded-lg border border-emerald-500/10 text-[11px] text-emerald-400 italic"></div>
+            </div>
+
+            <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 shadow-2xl backdrop-blur-sm">
+                <select id="select-3" class="w-full bg-slate-800 border-none text-white text-sm rounded-lg mb-4 focus:ring-emerald-500"></select>
+                <div id="data-3" class="flex justify-between items-end mb-4">
+                    <div class="text-3xl font-black text-white" id="price-3">--.--</div>
+                    <div id="change-3" class="font-mono text-sm">--%</div>
+                </div>
+                <div class="h-64"><canvas id="chart-3"></canvas></div>
+                <div id="insight-3" class="mt-4 p-3 bg-emerald-500/5 rounded-lg border border-emerald-500/10 text-[11px] text-emerald-400 italic"></div>
+            </div>
+        </div>
+
+        <footer class="mt-12 text-center text-slate-700 text-[10px] uppercase tracking-[0.2em] py-8 border-t border-slate-900">
+            <p>Intelligence de Marché • Noé Le Van Canh dit Ban • © 2026</p>
+        </footer>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

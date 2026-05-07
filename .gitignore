@@ -1,0 +1,12 @@
+# IDE
+.vscode/
+.idea/
+
+# OS files
+config.txt
+.DS_Store
+Thumbs.db
+
+# API Keys (si tu utilises un fichier .env plus tard)
+.env
+
